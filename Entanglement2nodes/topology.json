@@ -1,0 +1,52 @@
+{
+    "nodes": [
+      {
+        "name": "NIST",
+        "type": "QuantumRouter",
+        "seed": 0,
+        "memo_size": 50
+      },
+      {
+        "name": "UMD",
+        "type": "QuantumRouter",
+        "seed": 1,
+        "memo_size": 50
+      },
+      {
+        "name": "NRL",
+        "type": "QuantumRouter",
+        "seed": 2,
+        "memo_size": 50
+      }
+    ],
+    "qconnections": [
+      {
+        "node1": "NIST",
+        "node2": "UMD",
+        "attenuation": 0.0002,
+        "distance": 100,
+        "type": "meet_in_the_middle"
+      },
+      {
+        "node1": "NRL",
+        "node2": "UMD",
+        "attenuation": 0.0002,
+        "distance": 100,
+        "type": "meet_in_the_middle"
+      }
+    ],
+    "is_parallel": false,
+    "stop_time": 2000000000000,
+    "cconnections": [
+      {
+        "node1": "NIST",
+        "node2": "UMD",
+        "delay": 500000000
+      },
+      {
+        "node1": "NRL",
+        "node2": "UMD",
+        "delay": 500000000
+      }
+    ]
+  }
